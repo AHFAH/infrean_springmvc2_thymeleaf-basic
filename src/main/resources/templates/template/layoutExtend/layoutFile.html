@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html th:fragment="layout (title, content)" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:replace="${title}">레이아웃 타이틀</title>
+<!--  title은 layoutExtendMain에서 넘어온 '메인 페이지 타이틀'로 바뀐다-->
+</head>
+<body>
+<h1>레이아웃 H1</h1>
+<!-- content 부분은 layoutExtendMain section에서 넘어온 컨텐츠로 바뀐다-->
+<div th:replace="${content}">
+    <p>레이아웃 컨텐츠</p>
+</div>
+<footer>
+    레이아웃 푸터
+</footer>
+</body>
+</html>
